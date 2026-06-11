@@ -10,7 +10,6 @@ made by stanley
 - Daily math question possibly???
 - Points???
 - Leaderboard for points???
-- 
 ## How to run
 simply clone this, run
 ``` npm i ```

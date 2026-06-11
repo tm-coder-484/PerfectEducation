@@ -74,18 +74,19 @@
 
 body {
     margin: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 #root {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
 }
 
 ::-webkit-scrollbar {
-    width: 10px; /* Width of vertical scrollbar */
-    height: 10px; /* Height of horizontal scrollbar */
+    width: 10px;
+    height: 10px;
 }
 
 button {
@@ -93,21 +94,21 @@ button {
 }
 .main {
     background-color: var(--surface-container-lowest);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .bar {
     position: fixed;
+    left: 0;
+    right: 0;
     background-color: var(--surface-container-low);
-    width: 100vw;
     height: 64px;
     display: flex;
     align-items: center;
-    padding: 8px;
-    padding-inline: 20px;
+    padding: 8px 20px;
 }
 
 .main-logo {
@@ -192,7 +193,7 @@ button {
     display: flex;
     align-items: stretch;
     gap: 16px;
-    height: 400px;
+    height: 480px;
     padding-top: 8px;
     padding-inline: 8vw;
 }
@@ -208,13 +209,23 @@ button {
     align-items: center;
     flex-direction: column;
 }
+.card {
+    min-width: 0;
+}
 
 .card-image-container {
     width: 100%;
     height: 200px;
+    min-height: 200px;
+    max-height: 200px;
     border-radius: 8px;
     background-color: var(--surface-container);
     margin-bottom: 8px;
+}
+
+.card-image-container {
+    overflow: hidden;
+    position: relative;
 }
 
 .card-text {
@@ -231,4 +242,20 @@ button {
     width: 100%;
     height: 100%;
     border-radius: 8px;
+}
+
+.card-image {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+.card-image {
+    object-position: center center;
+}
+
+.card-image-container {
+    flex: 0 0 200px;
 }
