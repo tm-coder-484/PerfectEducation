@@ -12,8 +12,7 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="PerfectEducation API", version="1.0.0")
 
-# --- Middleware ---
-
+# middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
