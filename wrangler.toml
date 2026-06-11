@@ -1,5 +1,5 @@
 # Name of your Worker in Cloudflare
-name = "rk"
+name = "perfecteducation"
 
 # Cloudflare runtime compatibility date
 compatibility_date = "2025-12-04"
