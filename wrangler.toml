@@ -1,0 +1,14 @@
+# Name of your Worker in Cloudflare
+name = "rk"
+
+# Cloudflare runtime compatibility date
+compatibility_date = "2025-12-04"
+
+# Path to the main Worker script
+main = "./worker.js"
+
+# Optional: target environment, e.g., workers_dev = true for .workers.dev subdomain
+workers_dev = true
+
+# Optional: log level for debugging
+# log_level = "info"
