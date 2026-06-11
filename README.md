@@ -7,6 +7,10 @@ made by stanley
 - connect to backend
 - add all the subjects
 - idk some other stuff
+- Daily math question possibly???
+- Points???
+- Leaderboard for points???
+- 
 ## How to run
 simply clone this, run
 ``` npm i ```
