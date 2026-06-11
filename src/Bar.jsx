@@ -15,7 +15,7 @@ function Bar() {
           href="https://github.com/tm-coder-484/PerfectEducation"
           className="github-btn"
         >
-          <FaGithub className="github-icon" />
+          <FaGithub className="github-icon" color="#FFFFFF" />
         </a>
       </div>
     </>

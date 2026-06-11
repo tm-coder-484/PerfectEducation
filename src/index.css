@@ -82,6 +82,15 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
+::-webkit-scrollbar {
+    width: 10px; /* Width of vertical scrollbar */
+    height: 10px; /* Height of horizontal scrollbar */
+}
+
+button {
+    cursor: pointer;
+}
 .main {
     background-color: var(--surface-container-lowest);
     width: 100vw;
@@ -91,6 +100,7 @@ body {
 }
 
 .bar {
+    position: fixed;
     background-color: var(--surface-container-low);
     width: 100vw;
     height: 64px;
@@ -166,13 +176,14 @@ button {
 
 .content {
     height: 1000px;
+    background-color: var(--surface-container-lowest);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .main-heading {
-    margin-top: 120px;
+    margin-top: 100px;
     font-size: 60px;
 }
 
@@ -181,8 +192,9 @@ button {
     display: flex;
     align-items: stretch;
     gap: 16px;
-    height: 560px;
-    padding-inline: 140px;
+    height: 400px;
+    padding-top: 8px;
+    padding-inline: 8vw;
 }
 
 .card {
@@ -207,8 +219,16 @@ button {
 
 .card-text {
     text-align: left;
+    margin-bottom: 4px;
 }
 
 .card-paragraph {
     font-size: 18px;
+}
+
+.card-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
 }
