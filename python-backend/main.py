@@ -12,6 +12,17 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="PerfectEducation API", version="1.0.0")
 
+# data class for post api
+
+class ApplicationForm(BaseModel):
+    name: str
+    year_group: int
+    subjects: list[str]       # Accepts ["subject1", "subject2"]
+    time: time                # Accepts stuff like "14:30:00"
+    days: list[str]           # Accepts ["day1", "day2"]
+    email: EmailStr           # Makes sure its a real email
+
+
 # middleware
 app.add_middleware(
     CORSMiddleware,
@@ -21,7 +32,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
+# api style logging part so u can see if requests get held up and who from
 @app.middleware("http")
 async def logging_middleware(request: Request, call_next):
     request_id = str(uuid.uuid4())[:8]
@@ -35,19 +46,37 @@ async def logging_middleware(request: Request, call_next):
     return response
 
 
-# example routes if u want
-@app.get("/health", response_model=dict)
-async def health():
-    return {"working": "yes"}
+# function to log people submitting to a file
+async def save_application(name, year_group, subjects, time, days, email)
+    try:
+        with open("applications.txt", "a", encoding="utf-8") as file:
+        file.write("\n==================================")
+        file.write(f"\nName: {name}")
+        file.write(f"\nYear: {year_group}")
+        file.write(f"\nSubjects: {subjects}")
+        file.write(f"\nTime: {time}")
+        file.write(f"\nDays: {days}")
+        file.write(f"\nEmail: {email}")
+    except Exception as error:
+        return False #tell the endpoint that it didn't work
+    return True 
+#post api endpoint
 
-
-
-
-@app.post(
-    "/items",
-    response_model=ItemResponse,
-    status_code=status.HTTP_201_CREATED,
-    summary="Create an item",
-)
-
+@app.post("/submit", response_model=MessageResponse)
+    async def submit_appl(form: ApplicationForm):
+        saved = await save_application(
+            name=form.name,
+            year_group=form.year_group,
+            subjects=form.subjects,
+            time=form.time,
+            days=form.days,
+            email=form.email
+        )
+        if not saved:
+            raise HTTPException(status_code=500, detail="Failed to save application")
+            
+        return {
+            "message": "Saved",
+        }
+        
 
