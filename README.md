@@ -1,4 +1,4 @@
-# After-School-Work-Privilege
+# Pefect Education
 Study sessions for yr8
 
 ## We are offering tutoring for year 7 and 8's
