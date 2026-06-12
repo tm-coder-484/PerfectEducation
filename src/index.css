@@ -64,6 +64,10 @@
     --source-color: #441aa1;
 }
 
+a {
+  text-decoration: none;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -113,9 +117,20 @@ button {
     /* border-bottom: 1px solid var(--outline); */
 }
 
+.paragraph {
+    font-size: 24px;
+    margin-inline: 64px;
+    margin-bottom: 8px;
+}
+
+.sub-heading {
+    font-size: 40px;
+    margin-top: 32px;
+}
+
 .main-logo {
     width: 172px;
-    margin-right: 8px;
+    margin-right: 24px;
 }
 
 button {
@@ -126,17 +141,36 @@ button {
     height: 100%;
     background-color: transparent;
     color: var(--on-surface);
-    margin-inline: 16px;
+    padding-inline: 16px;
     font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.2s ease-in-out;
-    font-weight: 600;
+    font-weight: 550;
 }
 
 .bar-button:hover {
     color: var(--primary);
+}
+
+.bar-button-container {
+    border-radius: 12px;
+    height: 100%;
+    background-color: transparent;
+    color: var(--on-surface);
+    
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    font-weight: 550;
+}
+
+.bar-button-container:hover {
+    color: var(--primary);
+    background-color: rgb(from var(--primary-container) r g b / 0.2);
 }
 
 .page-button {
