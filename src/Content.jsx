@@ -1,4 +1,4 @@
-import PageButton from "./Button.jsx";
+import {PageButton} from "./Button.jsx";
 import Card from "./Card.jsx";
 import Math from "./assets/images/math.jpg";
 import Coding from "./assets/images/coding.png";
@@ -13,6 +13,9 @@ function Content() {
           you
         </h1>
         <PageButton text={"Get started"} />
+        <h2 className="sub-heading">
+          What we Teach
+        </h2>
         <div className="card-row">
           <Card
             text="Math"

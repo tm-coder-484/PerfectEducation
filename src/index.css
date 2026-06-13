@@ -86,6 +86,7 @@ body {
 #root {
     width: 100%;
     min-height: 100vh;
+    display: flex;
 }
 
 ::-webkit-scrollbar {
@@ -93,15 +94,14 @@ body {
     height: 10px;
 }
 
-button {
-    cursor: pointer;
-}
+
 .main {
     background-color: var(--surface-container-lowest);
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .bar {
@@ -125,7 +125,6 @@ button {
 
 .sub-heading {
     font-size: 40px;
-    margin-top: 32px;
 }
 
 .main-logo {
@@ -134,7 +133,9 @@ button {
 }
 
 button {
+    cursor: pointer;
     border: none;
+    box-shadow: none;
 }
 
 .bar-button {
@@ -170,7 +171,7 @@ button {
 
 .bar-button-container:hover {
     color: var(--primary);
-    background-color: rgb(from var(--primary-container) r g b / 0.2);
+    background-color: rgb(from var(--primary) r g b / 0.2);
 }
 
 .page-button {
@@ -212,7 +213,9 @@ button {
 }
 
 .content {
-    height: 1000px;
+    height: 2000px;
+    width: min(1000px, 100vw);
+    padding-top: 80px;
     background-color: var(--surface-container-lowest);
     display: flex;
     flex-direction: column;
@@ -220,28 +223,41 @@ button {
 }
 
 .main-heading {
-    margin-top: 100px;
+
     font-size: 60px;
 }
 
 .card-row {
-    width: 100%;
-    display: flex;
-    align-items: stretch;
-    gap: 16px;
+    width: min(1000px, 98vw);
+    display: grid;
+    /* align-items: stretch; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px 0px;
+    
     height: 480px;
     padding-top: 8px;
-    padding-inline: 260px;
+    /* padding-inline: 260px; */
 }
 
 @media screen and (max-width: 1500px) {
-    .card-row {
+    /* .card-row {
         padding-inline: 8vw;
-    }
+    } */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .card {
-    flex: 1;
+    width: 100%;
+    height: 100%;
+    margin: 8px;
+
 
     background-color: var(--surface-container-low);
 
@@ -256,7 +272,7 @@ button {
 
     scale: 1.1;
     margin-inline: 16px;
-    background-color: var(--surface-container);
+    background-color: rgb(from var(--primary) r g b / 0.2);
 }
 .card {
     min-width: 0;
@@ -283,6 +299,7 @@ button {
 
 .card-paragraph {
     font-size: 18px;
+    height: 180px;
 }
 
 .card-image {
@@ -306,4 +323,126 @@ img {
 
 .card-image-container {
     flex: 0 0 200px;
+}
+
+.apply-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.textfield {
+    flex: 1;
+    position: relative;
+    width: 1fr;
+}
+
+.textfield input {
+    width: 100%;
+    padding: 16px 12px;
+    border: 2px solid var(--outline);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--on-surface);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.textfield label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--surface-container-lowest);
+    padding: 0 4px;
+    color: var(--on-surface);
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.textfield input:focus {
+    border-color: var(--primary);
+}
+
+.textfield input:focus + label,
+.textfield input:not(:placeholder-shown) + label {
+    top: 0;
+    transform: translateY(-50%) scale(0.85);
+    color: var(--primary);
+}
+
+
+.chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    padding: 8px 16px;
+    border-radius: 9999px;
+    background: var(--surface-container-low);
+    color: var(--on-surface);
+    cursor: pointer;
+    user-select: none;
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        color 0.2s,
+        transform 0.1s;
+}
+
+.chip:hover {
+    background: rgb(from var(--primary) r g b / 0.2)
+}
+
+.chip:active {
+    transform: scale(0.97);
+}
+
+input:checked + .chip {
+    background: var(--primary);
+    color: var(--on-primary);
+}
+
+.extra-textfield {
+    width: 720px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .textfield {
+    width: 1fr;
+}
+
+.form-submit-button {
+    border: none;
+    height: 52px;
+    width: 720px;
+    border-radius: 8px;
+    background-color: var(--surface-container-low);
+    color: var(--on-surface);
+    padding-inline: 16px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    font-weight: 550;
+}
+
+.form-submit-button:hover {
+    color: var(--on-primary);
+    background-color: var(--primary);
+}
+
+.internal-link {
+    color: var(--primary);
+    transition: color 0.2s ease;
 }

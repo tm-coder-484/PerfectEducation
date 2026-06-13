@@ -1,5 +1,5 @@
 import logo from "./assets/logo.png";
-import BarButton from "./BarButton.jsx";
+import {BarButton} from "./Button.jsx";
 import { FaGithub } from "react-icons/fa";
 
 import { Routes, Route, Link } from 'react-router'
@@ -12,7 +12,7 @@ function Bar() {
           <img src={logo} alt="logo" className="main-logo" />
         </Link>
         <BarButton text="Lessons"/>
-        <BarButton text="Apply"  />
+        <BarButton text="Apply"  link="/apply"/>
         <BarButton text="About us" link="/about"/>
         <div className="horizontal-spacer"></div>
         <a
