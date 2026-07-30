@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr
 from datetime import time as dt_time 
+from fastapi.responses import FileResponse
 import time
 import logging
 import uuid
@@ -81,6 +82,10 @@ async def submit_application(form: ApplicationForm):
     return {
         "message": "Saved",
     }
+#so ts works properly and serves the website that *I* compiled hehe
+@app.get("/", response_class=FileResponse)
+def serve_website():
+    return FileResponse("dist/index.html")
 # main entry point for server
 if __name__ == "__main__":
     import uvicorn
