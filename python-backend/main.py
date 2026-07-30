@@ -66,7 +66,7 @@ def save_application(name, year_group, subjects, time, days, email):
 #post api endpoint
 
 @app.post("/submit", response_model=MessageResponse)
-async def submit_appl(form: ApplicationForm):
+async def submit_application(form: ApplicationForm):
     saved = save_application(
         name=form.name,
         year_group=form.year_group,
@@ -84,4 +84,4 @@ async def submit_appl(form: ApplicationForm):
 # main entry point for server
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
