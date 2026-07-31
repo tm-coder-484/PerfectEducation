@@ -27,7 +27,7 @@ function Content() {
           />
           <Card
             text="Digital Technologies"
-            paragraph="Many of our members have exceptional coding skills. They created this website you're looking at right now. If you want to learn how to code in html, css and javascript along with other select languages this is the place!"
+            paragraph="Many of our members have exceptional coding skills. They created this website you're looking at right now. If you want to learn how to code in html, css and javascript along with other select languages like python, this is the place!"
             imgsrc={Coding}
           />
           <Card
