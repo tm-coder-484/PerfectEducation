@@ -1,4 +1,5 @@
 import { Routes, Route, Link } from 'react-router'
+import Bar from "./Bar.jsx";
 
 function Apply() {
   return (
