@@ -3,6 +3,7 @@ import Card from "./Card.jsx";
 import Math from "./assets/images/math.jpg";
 import Coding from "./assets/images/coding.png";
 import English from "./assets/images/english.jpeg";
+import History from "./assets/images/history.png";
 
 function Content() {
   return (
@@ -28,6 +29,11 @@ function Content() {
             text="English"
             paragraph="The exceptional English skills of our team allows us to be able to teach you whatever you need! From writing peel paragraphs to analysing."
             imgsrc={English}
+          />
+          <Card
+            text="History"
+            paragraph="Our members have a strong understanding of HASS and History. We can help you through essays, analysing sources and understanding the subject."
+            imgsrc={History}
           />
         </div>
       </div>
