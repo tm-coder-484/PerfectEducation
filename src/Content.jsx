@@ -3,7 +3,7 @@ import Card from "./Card.jsx";
 import Math from "./assets/images/math.jpg";
 import Coding from "./assets/images/coding.png";
 import English from "./assets/images/english.jpeg";
-import History from "./assets/images/history.jpeg";
+import History from "./assets/images/history.png";
 
 function Content() {
   return (
