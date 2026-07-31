@@ -1,0 +1,1 @@
+Stan please fix how you can't click back to lessons when you're on the about or apply pages. Also r u proud of me, I don't do react normally or vite but I still did this! (no ai used just saying)
