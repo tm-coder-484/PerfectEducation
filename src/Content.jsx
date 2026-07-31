@@ -4,6 +4,7 @@ import Math from "./assets/images/math.jpg";
 import Coding from "./assets/images/coding.png";
 import English from "./assets/images/english.jpeg";
 import History from "./assets/images/history.png";
+import Science from "./assets/images/science.png";
 
 function Content() {
   return (
@@ -37,6 +38,11 @@ function Content() {
             text="History"
             paragraph="Our team has exceptional skills in History. We can guide you through writing essays and analysing sources. We can also help you understand the content you're working on."
             imgsrc={History}
+          />
+          <Card
+            text="Science"
+            paragraph="Our team has great skills in Science. We can guide you through understanding complex concepts and reviewing your experiment results. We can also help you with your exams stile work."
+            imgsrc={Science}
           />
         </div>
       </div>
