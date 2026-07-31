@@ -1,4 +1,5 @@
 import {PageButton} from "./Button.jsx";
+import Bar from "./Bar.jsx";
 
 function About() {
   return (

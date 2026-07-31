@@ -11,7 +11,7 @@ function Bar() {
         <Link to="/">
           <img src={logo} alt="logo" className="main-logo" />
         </Link>
-        <BarButton text="Lessons"/>
+        <BarButton text="Lessons" link="/"/>
         <BarButton text="Apply"  link="/apply"/>
         <BarButton text="About us" link="/about"/>
         <div className="horizontal-spacer"></div>
