@@ -1,7 +1,11 @@
 import { Routes, Route, Link } from 'react-router'
 
 export function PageButton({ text, link }) {
-  return <button className="page-button">{text}</button>;
+  return (
+    <Link to={link} className="page-button-link">
+      <button className="page-button">{text}</button>
+    </Link>
+  );
 }
 
 export function BarButton({ text, link }) {

@@ -14,7 +14,7 @@ function Content() {
           Learning that <span className="text-primary-color">adapts</span> to
           you
         </h1>
-        <PageButton text={"Get started"} link="/apply"/>
+        <PageButton text={"Get started"} link={"/apply"}/>
         <h2 className="sub-heading">
           What we Teach
         </h2>

@@ -18,7 +18,7 @@ function About() {
         Stanley: Programmer and math specialist
         </p>
         <p className="paragraph">
-        Tom: Programmer, science, hass and Chinese specialist
+        Tom: Programmer, science and hass specialist
         </p>
         <p className="paragraph">
         Jason: German, music, English and arts specialist
