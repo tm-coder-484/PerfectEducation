@@ -25,6 +25,7 @@ class ApplicationForm(BaseModel):
     time: dt_time             # Accepts stuff like "14:30:00"
     days: list[str]           # Accepts ["day1", "day2"]
     email: EmailStr           # Makes sure its a real email
+    extra: str = ""      # Anything extra
 
 
 # middleware
@@ -51,7 +52,7 @@ async def logging_middleware(request: Request, call_next):
 
 
 # function to log people submitting to a file
-def save_application(name, year_group, subjects, time, days, email):
+def save_application(name, year_group, subjects, time, days, email, extra):
     try:
         with open("applications.txt", "a", encoding="utf-8") as file:
             file.write("\n==================================")
@@ -61,6 +62,7 @@ def save_application(name, year_group, subjects, time, days, email):
             file.write(f"\nTime: {time}")
             file.write(f"\nDays: {days}")
             file.write(f"\nEmail: {email}")
+            file.write(f"\nExtra: {extra}")
     except Exception as error:
         return False #tell the endpoint that it didn't work
     return True 
@@ -74,7 +76,8 @@ async def submit_application(form: ApplicationForm):
         subjects=form.subjects,
         time=form.time,
         days=form.days,
-        email=form.email
+        email=form.email,
+        extra=form.extra
     )
     if not saved:
         raise HTTPException(status_code=500, detail="Failed to save application")
