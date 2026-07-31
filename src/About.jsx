@@ -24,7 +24,7 @@ function About() {
         Jason: German, music, English and arts specialist
         </p>
         <p className="paragraph">
-        Ryan: Video and filming
+        Ryan: Video and filming (useless)
         </p>
         <h2 className="sub-heading">
           About this website
