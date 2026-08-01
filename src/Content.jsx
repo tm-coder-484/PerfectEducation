@@ -59,7 +59,7 @@ function Content() {
           />
           <Card
             text="Arts"
-            paragraph="Although not the subject our team are most skilled at, we can help you get through any subject."
+            paragraph="Although not the subject our team are most skilled at, we can certainly help you get through any subject."
             imgsrc={Arts}
           />
         </div>
