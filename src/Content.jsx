@@ -6,6 +6,7 @@ import English from "./assets/images/english.jpeg";
 import History from "./assets/images/history.png";
 import Science from "./assets/images/science.png";
 import Music from "./assets/images/music.webp";
+import German from "./assets/images/german.webp";
 
 function Content() {
   return (
@@ -49,6 +50,11 @@ function Content() {
             text="Music"
             paragraph="Our team is skilled in music playing making and reading (Jason). Setting up instruments may be tricky though, but we are happy to help!"
             imgsrc={Music}
+          />
+          <Card
+            text="German"
+            paragraph="Our team are very skilled in German, we have the top ep champions, and someone from the German Immersion program. We can help you with everything, from exams to pronunciation."
+            imgsrc={German}
           />
         </div>
       </div>
