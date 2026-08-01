@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { Routes, Route, Link } from 'react-router'
 import Bar from "./Bar.jsx";
 
-const SUBJECTS = ["math", "science", "english", "digi-tech", "german", "music", "arts"];
+const SUBJECTS = ["math", "science", "english", "digi-tech", "german", "music", "arts", "hass"];
 const DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday"];
 
 function Apply() {
