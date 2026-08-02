@@ -98,7 +98,7 @@ async def submit_application(form: ApplicationForm):
                 "message": "Your name is invalid",
             }
     for subject in form.subjects:
-        served = await is_served_subject(form.subjects)
+        served = await is_served_subject(subject)
         if served is False:
             print("Rejected subjects")
             raise HTTPException(status_code=422, detail="One or more of the subjects selected aren't served")
