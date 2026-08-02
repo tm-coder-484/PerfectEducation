@@ -1,0 +1,50 @@
+{"Lessons": [
+    {
+        "id": 1,
+        "title": "Math",
+        "description": "",
+        "image": "/assets/images/math.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Coding",
+        "description": "",
+        "image": "/assets/images/coding.png"
+    },
+    {
+        "id": 3,
+        "title": "German",
+        "description": "",
+        "image": "/assets/images/german.webp"
+    },
+    {
+        "id": 4,
+        "title": "Arts",
+        "description": "",
+        "image": "/assets/images/art.jpg"
+    }
+    {
+        "id": 5,
+        "title": "Science",
+        "description": "",
+        "image": "/assets/images/science.jpg"
+    }
+    {
+        "id": 6,
+        "title": "History",
+        "description": "",
+        "image": "/assets/images/history.jpg"
+    }
+    {
+        "id": 7,
+        "title": "English",
+        "description": "",
+        "image": "/assets/images/english.jpg"
+    }
+    {
+        "id": 8,
+        "title": "Music",
+        "description": "",
+        "image": "/assets/images/music.jpg"
+    }
+]}
