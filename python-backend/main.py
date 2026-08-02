@@ -50,6 +50,15 @@ async def logging_middleware(request: Request, call_next):
     response.headers["X-Response-Time-ms"] = f"{duration_ms:.1f}"
     return response
 
+# get lessons
+async def get_lessons():
+    with open("lessons.json", "r", encoding="utf-8") as file:
+        lessons = file.read()
+    print(lessons)
+    return lessons
+
+# Endpoint do later
+@app.get("/lessons", response_model=list[dict])
 
 # function to log people submitting to a file
 def save_application(name, year_group, subjects, time, days, email, extra):
