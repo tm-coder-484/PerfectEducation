@@ -67,9 +67,44 @@ def save_application(name, year_group, subjects, time, days, email, extra):
         return False #tell the endpoint that it didn't work
     return True 
 #post api endpoint
-
+bad_usernames = ["idk", "1234", "gay"]
+async def is_invalid_name(name):
+    if name in bad_usernames:
+        return True
+    else:
+        return False
+served_subjects = ["math", "science", "english", "digi-tech", "german", "music", "music", "arts", "hass"]
+async def is_served_subject(subject):
+    print(f"Subject submitted: {subject}")
+    if subject not in served_subjects:
+        return True
+    else:
+        return False
 @app.post("/submit", response_model=MessageResponse)
 async def submit_application(form: ApplicationForm):
+    print(f"Name: {form.name}, Grade: {form.year_group}, Subjects: {form.subjects}, Time: {form.time}, Days: {form.days}, Email: {form.email}, Extra: {form.extra}.")
+    if form.year_group >= 9 or str(form.year_group).isdigit():
+        print("Rejected grade")
+        raise HTTPException(status_code=422, detail="This grade is unavailable for lessons")
+        return {
+            "message": "This grade is unavailable for lessons",
+        }
+    invalid_name = await is_invalid_name(form.name)
+    if invalid_name:
+        if invalid_name is True:
+            print("Rejected name")
+            raise HTTPException(status_code=422, detail="Your name is invalid")
+            return {
+                "message": "Your name is invalid",
+            }
+    for subject in form.subjects:
+        served = await is_served_subject(form.subjects)
+        if served is False:
+            print("Rejected subjects")
+            raise HTTPException(status_code=422, detail="One or more of the subjects selected aren't served")
+            return {
+                "message": "One or more of the subjects selected aren't served"
+            }
     saved = save_application(
         name=form.name,
         year_group=form.year_group,
@@ -87,7 +122,7 @@ async def submit_application(form: ApplicationForm):
     }
 #so ts works properly and serves the website that *I* compiled hehe
 @app.get("/", response_class=FileResponse)
-def serve_website():
+async def serve_website():
     return FileResponse("dist/index.html")
 # main entry point for server
 if __name__ == "__main__":
