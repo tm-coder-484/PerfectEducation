@@ -1,4 +1,5 @@
 import {PageButton} from "./Button.jsx";
+import { Routes, Route, Link } from 'react-router'
 import Card from "./Card.jsx";
 import Math from "./assets/images/math.jpg";
 import Coding from "./assets/images/coding.png";
@@ -8,6 +9,8 @@ import Science from "./assets/images/science.png";
 import Music from "./assets/images/music.webp";
 import German from "./assets/images/german.webp";
 import Arts from "./assets/images/art.jpg";
+import Logo from "./assets/logo.png";
+import Apply from "./Apply.jsx";
 
 function Content() {
   return (
@@ -61,6 +64,12 @@ function Content() {
             text="Arts"
             paragraph="Although not the subject our team are most skilled at, we can certainly help you get through any subject."
             imgsrc={Arts}
+          />
+          <Card
+            text="Apply"
+            paragraph="Our team can help you through almost any subject, letting you get good marks and helping you understand the subject."
+            imgsrc={Logo}
+            link="/apply"
           />
         </div>
       </div>
