@@ -83,7 +83,7 @@ async def is_served_subject(subject):
 @app.post("/submit", response_model=MessageResponse)
 async def submit_application(form: ApplicationForm):
     print(f"Name: {form.name}, Grade: {form.year_group}, Subjects: {form.subjects}, Time: {form.time}, Days: {form.days}, Email: {form.email}, Extra: {form.extra}.")
-    if form.year_group >= 9 or str(form.year_group).isdigit():
+    if form.year_group >= 9 or not str(form.year_group).isdigit():
         print("Rejected grade")
         raise HTTPException(status_code=422, detail="This grade is unavailable for lessons")
         return {
