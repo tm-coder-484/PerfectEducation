@@ -11,12 +11,12 @@ function Bar() {
         <Link to="/">
           <img src={logo} alt="logo" className="main-logo" />
         </Link>
-        <BarButton text="Lessons" link="/"/>
+        <BarButton text="Lessons" link="/lessons"/>
         <BarButton text="Apply"  link="/apply"/>
         <BarButton text="About us" link="/about"/>
         <div className="horizontal-spacer"></div>
         <a
-          href="https://github.com/tm-coder-484/PerfectEducation"
+          href="https://github.com/tm-coder-484/PerfectEducation/tree/i-dont-know"
           className="github-btn"
         >
           <FaGithub className="github-icon" color="#FFFFFF" />
