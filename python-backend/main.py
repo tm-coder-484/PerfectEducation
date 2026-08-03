@@ -6,6 +6,7 @@ from fastapi.responses import FileResponse
 import time
 import logging
 import uuid
+import json
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -51,14 +52,48 @@ async def logging_middleware(request: Request, call_next):
     return response
 
 # get lessons
+# Why does the word "lesson" suddenly look really weird to me??? It looks like it's spelt wrong
 async def get_lessons():
     with open("lessons.json", "r", encoding="utf-8") as file:
-        lessons = file.read()
-    print(lessons)
+        lessons_data = file.read()
+
+    parsed_json = json.loads(lessons_data)
+    
+    lesson_names = [{"title": lesson["title"]} for lesson in parsed_json.get("Lessons", [])]
+    return lesson_names
+
+
+@app.get("/api/lessons", response_model=list[dict])
+async def lessons():
+    lessons = await get_lessons()
     return lessons
 
-# Endpoint do later
-@app.get("/lessons", response_model=list[dict])
+# singular lesson query
+import json
+from fastapi import FastAPI, HTTPException
+
+@app.get("/api/lessons/{lesson}", response_model=dict)
+async def lookup_lesson(lesson: str):
+    lessons = await get_lessons() 
+    lessonl = lesson.lower()
+    
+    if lessonl not in [l["title"].lower() for l in lessons]:
+        raise HTTPException(status_code=404, detail="Lesson not found")
+    
+    # open and parse
+    with open("lessons.json", "r", encoding="utf-8") as file:
+        parsed_json = json.load(file) 
+    
+    for l in parsed_json.get("Lessons", []):
+        if l.get("title", "").lower() == lessonl:
+            print(f"lesson: {l}")
+            return l
+
+    #  stops it returning none
+    raise HTTPException(
+        status_code=500, 
+        detail="Lesson not found in JSON file"
+    )
 
 # function to log people submitting to a file
 def save_application(name, year_group, subjects, time, days, email, extra):
