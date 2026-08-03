@@ -69,8 +69,6 @@ async def lessons():
     return lessons
 
 # singular lesson query
-import json
-from fastapi import FastAPI, HTTPException
 
 @app.get("/api/lessons/{lesson}", response_model=dict)
 async def lookup_lesson(lesson: str):
