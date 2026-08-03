@@ -92,6 +92,10 @@ async def lookup_lesson(lesson: str):
         status_code=500, 
         detail="Lesson not found in JSON file"
     )
+#serve favicon
+@app.get("/favicon.png")
+async def favicon():
+    return FileResponse("favicon.png", media_type="image/png")
 
 # function to log people submitting to a file
 def save_application(name, year_group, subjects, time, days, email, extra):
