@@ -26,7 +26,7 @@ class ApplicationForm(BaseModel):
     time: dt_time             # Accepts stuff like "14:30:00"
     days: list[str]           # Accepts ["day1", "day2"]
     email: EmailStr           # Makes sure its a real email
-    extra: str = ""      # Anything extra
+    extra: str = ""      # Anything extra, default empty
 
 
 # middleware
