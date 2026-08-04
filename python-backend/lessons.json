@@ -27,24 +27,24 @@
         "id": 5,
         "title": "Science",
         "description": "We can help you through any science subjects in year 7-8, and help you grasp the content and get good marks.",
-        "image": "/assets/images/science.jpg"
+        "image": "/assets/images/science.png"
     },
     {
         "id": 6,
         "title": "History",
         "description": "We can help you through HASS essays and help you learn about what you're focusing on in class.",
-        "image": "/assets/images/history.jpg"
+        "image": "/assets/images/history.png"
     },
     {
         "id": 7,
         "title": "English",
         "description": "We can help you with assignments, or things like understanding text structure and analysing poems.",
-        "image": "/assets/images/english.jpg"
+        "image": "/assets/images/english.jpeg"
     },
     {
         "id": 8,
         "title": "Music",
         "description": "We can help you with technical skills, music theory and the content you're working on in stile.",
-        "image": "/assets/images/music.jpg"
+        "image": "/assets/images/music.webp"
     }
 ]}
