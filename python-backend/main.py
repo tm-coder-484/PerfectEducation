@@ -174,6 +174,11 @@ async def submit_application(form: ApplicationForm):
     return {
         "message": "Saved",
     }
+
+@app.get("/assets/images/{filename}")
+async def serve_image(filename: str):
+    return FileResponse(f"assets/images/{filename}", media_type="image/*")
+
 #so ts works properly and serves the website that *I* compiled hehe
 @app.get("/", response_class=FileResponse)
 async def serve_website():

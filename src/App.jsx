@@ -2,6 +2,7 @@ import Bar from "./Bar.jsx";
 import Content from "./Content.jsx";
 import About from "./About.jsx";
 import Apply from "./Apply.jsx";
+import Lessons from "./Lessons.jsx";
 import { Routes, BrowserRouter, Route, Link } from 'react-router'
 import Scroll from "./Scroll.jsx";
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Content />} />
           <Route path="/about" element={<About />} />
           <Route path="/apply" element={<Apply />} />
+          <Route path="/lessons" element={<Lessons />} />
         </Routes>
         
       </div>
