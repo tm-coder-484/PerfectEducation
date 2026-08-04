@@ -3,48 +3,56 @@
         "id": 1,
         "title": "Math",
         "description": "Learn maths from the basics to advanced topics to whatever you're learning. We can help you understand the content and get good marks.",
-        "image": "/assets/images/math.jpg"
+        "image": "/assets/images/math.jpg",
+        "link": "/lessons/math"
     },
     {
         "id": 2,
         "title": "Coding",
         "description": "Learn to code in many languages such as html, css, javascript, python and many more such as go. We can help you get through your semester of digitech or learn a coding language for fun.",
-        "image": "/assets/images/coding.png"
+        "image": "/assets/images/coding.png",
+        "link": "/lessons/coding"
     },
     {
         "id": 3,
         "title": "German",
         "description": "Learn german from scratch or from your level. We can help you through the subject or the immersion program, as members of our team has lots of experience with the language.",
-        "image": "/assets/images/german.webp"
+        "image": "/assets/images/german.webp",
+        "link": "/lessons/german"
     },
     {
         "id": 4,
         "title": "Arts",
         "description": "We can help you through any elective subject, such as visual art, media art or industrial tech. We can help you with your assement folio or help you do the stile work and understand the lessons.",
-        "image": "/assets/images/art.jpg"
+        "image": "/assets/images/art.jpg",
+        "link": "/lessons/art"
     },
     {
         "id": 5,
         "title": "Science",
         "description": "We can help you through any science subjects in year 7-8, and help you grasp the content and get good marks.",
-        "image": "/assets/images/science.png"
+        "image": "/assets/images/science.png",
+        "link": "/lessons/science"
     },
     {
         "id": 6,
         "title": "History",
         "description": "We can help you through HASS essays and help you learn about what you're focusing on in class.",
-        "image": "/assets/images/history.png"
+        "image": "/assets/images/history.png",
+        "link": "/lessons/history"
     },
     {
         "id": 7,
         "title": "English",
         "description": "We can help you with assignments, or things like understanding text structure and analysing poems.",
-        "image": "/assets/images/english.jpeg"
+        "image": "/assets/images/english.jpeg",
+        "link": "/lessons/english"
     },
     {
         "id": 8,
         "title": "Music",
         "description": "We can help you with technical skills, music theory and the content you're working on in stile.",
-        "image": "/assets/images/music.webp"
+        "image": "/assets/images/music.webp",
+        "link": "/lessons/music"
     }
 ]}
