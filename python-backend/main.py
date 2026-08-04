@@ -51,6 +51,13 @@ async def logging_middleware(request: Request, call_next):
     response.headers["X-Response-Time-ms"] = f"{duration_ms:.1f}"
     return response
 
+# Display api for lessons page, returns content for all lessons
+@app.get("/api/lessons/display", response_model=list[dict])
+async def display_lessons():
+    with open("lessons.json", "r", encoding="utf-8") as file:
+        parsed_json = json.load(file)
+    return parsed_json.get("Lessons", [])
+
 # get lessons
 # Why does the word "lesson" suddenly look really weird to me??? It looks like it's spelt wrong
 async def get_lessons():
@@ -126,6 +133,7 @@ async def is_served_subject(subject):
         return True
     else:
         return False
+
 @app.post("/submit", response_model=MessageResponse)
 async def submit_application(form: ApplicationForm):
     print(f"Name: {form.name}, Grade: {form.year_group}, Subjects: {form.subjects}, Time: {form.time}, Days: {form.days}, Email: {form.email}, Extra: {form.extra}.")
