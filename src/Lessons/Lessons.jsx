@@ -1,15 +1,5 @@
-import Card from "./Card.jsx";
+import Card from "../Card.jsx";
 import { useState, useEffect } from 'react';
-import Math from "./assets/images/math.jpg";
-import Coding from "./assets/images/coding.png";
-import English from "./assets/images/english.jpeg";
-import History from "./assets/images/history.png";
-import Science from "./assets/images/science.png";
-import Music from "./assets/images/music.webp";
-import German from "./assets/images/german.webp";
-import Arts from "./assets/images/art.jpg";
-import Logo from "./assets/logo.png";
-
 function Lessons() {
     const [lessons, setLessons] = useState([]);
     const [error, setError] = useState(null);

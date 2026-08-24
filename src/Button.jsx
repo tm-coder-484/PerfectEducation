@@ -15,3 +15,13 @@ export function BarButton({ text, link }) {
     </Link>
   );
 }
+
+export function LessonSidebarButton({ text, link }) {
+  return (
+    <Link to={link}className="lesson-sidebar-button-container">
+      <button className="lesson-sidebar-button">
+        {text}
+      </button>
+    </Link>
+  );
+}

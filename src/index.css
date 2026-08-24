@@ -160,7 +160,7 @@ button {
     height: 100%;
     background-color: transparent;
     color: var(--on-surface);
-    
+
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -230,10 +230,10 @@ button {
 .card-row {
     width: min(1000px, 98vw);
     display: grid;
-    /* align-items: stretch; */
+     /*align-items: stretch;*/
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px 0px;
-    
+    gap: 30px 32px;
+
     height: 480px;
     padding-top: 8px;
     /* padding-inline: 260px; */
@@ -445,4 +445,62 @@ input:checked + .chip {
 .internal-link {
     color: var(--primary);
     transition: color 0.2s ease;
+}
+
+.lesson-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 2000px;
+    padding-top: 64px;
+}
+
+.lesson-sidebar-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 260px;
+    height:100%;
+    padding: 16px;
+}
+
+.lesson-content {
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+
+}
+
+.lesson-sidebar {
+    background-color: var(--surface-container);
+    border-radius: 16px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 12px;
+    padding-inline: 8px;
+}
+
+.lesson-sidebar-button {
+    background-color: var(--surface-container);
+    width: 200px;
+    height: 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-inline: 6px;
+
+}
+
+.lesson-sidebar-button:hover {
+    transition: 0.2s ease-in-out;
+    background-color: var(--surface-container-high);
+    width: 200px;
+    height: 24px;
+    border-radius: 8px;
 }
