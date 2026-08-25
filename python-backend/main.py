@@ -1,5 +1,7 @@
 from fastapi import FastAPI, Request, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, EmailStr
 from datetime import time as dt_time 
 from fastapi.responses import FileResponse
@@ -37,6 +39,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# compress the js/css bundles vite spits out, they're big
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 # api style logging part so u can see if requests get held up and who from
 @app.middleware("http")
@@ -179,10 +184,26 @@ async def submit_application(form: ApplicationForm):
 async def serve_image(filename: str):
     return FileResponse(f"assets/images/{filename}", media_type="image/*")
 
+# the hashed js/css/image files vite puts in dist/assets.
+# has to be mounted AFTER the /assets/images route above, otherwise the mount
+# swallows those urls first and the lesson images 404
+app.mount("/assets", StaticFiles(directory="dist/assets"), name="assets")
+
 #so ts works properly and serves the website that *I* compiled hehe
 @app.get("/", response_class=FileResponse)
 async def serve_website():
     return FileResponse("dist/index.html")
+
+# catch all so refreshing on a router path like /about or /lessons/content/1 still
+# gives you the app instead of a 404. must stay below every /api route so it only
+# picks up whatever is left over
+@app.get("/{full_path:path}", response_class=FileResponse)
+async def serve_spa(full_path: str):
+    # unknown api urls should still come back as json, not the html page
+    if full_path.startswith("api/"):
+        raise HTTPException(status_code=404, detail="Not found")
+    return FileResponse("dist/index.html")
+
 # main entry point for server
 if __name__ == "__main__":
     import uvicorn
