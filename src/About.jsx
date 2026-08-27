@@ -20,7 +20,7 @@ function About() {
         Tom: Programmer, science and hass specialist
         </p>
         <p className="paragraph">
-        Jason: German, music, English and arts specialist
+        Jason: German, music, English and arts specialista and Junior school capitian
         </p>
         <p className="paragraph">
         Ryan: Video and filming (useless)
