@@ -1,12 +1,12 @@
 import { LessonSidebarButton } from '../Button.jsx'
-import { M1_1 } from './Math/Chapters.jsx'
+import { Algebra } from './Math/Chapters.jsx'
 
 function MathSidebar() {
   return (
     <>
-      <LessonSidebarButton text="1.1 Introduction to Algebra"></LessonSidebarButton>
-      <LessonSidebarButton text="1.2 Algebraic expressions"></LessonSidebarButton>
-      <LessonSidebarButton text="1.3 Solving equations"></LessonSidebarButton>
+      <LessonSidebarButton text="Algebra"></LessonSidebarButton>
+      <LessonSidebarButton text="Trigonometry"></LessonSidebarButton>
+      <LessonSidebarButton text="Calculus"></LessonSidebarButton>
     </>
   )
 }
@@ -23,7 +23,7 @@ function LessonContent() {
           </div>
         </div>
         <div className="lesson-content">
-          <M1_1/>
+          <Algebra/>
         </div>
       </div>
     </>
