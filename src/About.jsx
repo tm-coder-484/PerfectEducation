@@ -23,19 +23,25 @@ function About() {
         Jason: German, music, English and arts specialist and Junior school captain
         </p>
         <p className="paragraph">
+        Jack: Janitor (not really) & pending bio
+        </p>
+        <p className="paragraph">
         Ryan: Video and filming (useless)
         </p>
         <h2 className="sub-heading">
           About this website
         </h2>
         <p className="paragraph">
-        This website from scratch was created with react by the greatest programmers our team has to offer in order to deliver the best experience possible. We hope it makes things convenient for your use. (Also education perfect dont sue us pls)
+        This website from scratch was created with react, vite and node js by the greatest programmers our team has to offer in order to deliver the best experience possible. We hope it makes things convenient for your use. (Also education perfect dont sue us pls)
+        </p>
+        <p className="paragraph">
+        This site is hosted on azure cloud infrastructure and presented to you through cloudflare's cdn.
         </p>
         <h2 className="sub-heading">
           Inquiry
         </h2>
         <p className="paragraph">
-          If you have any questions, feel free to email us at (insert email later here)
+          If you have any questions, feel free to email us at smorr377@eq.edu.au
         </p>
       </div>
     </>
