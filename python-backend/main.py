@@ -25,7 +25,6 @@ class ApplicationForm(BaseModel):
     name: str
     year_group: int
     subjects: list[str]       # Accepts ["subject1", "subject2"]
-    time: dt_time             # Accepts stuff like "14:30:00"
     days: list[str]           # Accepts ["day1", "day2"]
     email: EmailStr           # Makes sure its a real email
     extra: str = ""      # Anything extra, default empty
@@ -110,14 +109,13 @@ async def favicon():
     return FileResponse("favicon.svg", media_type="image/svg+xml")
 
 # function to log people submitting to a file
-def save_application(name, year_group, subjects, time, days, email, extra):
+def save_application(name, year_group, subjects, days, email, extra):
     try:
         with open("applications.txt", "a", encoding="utf-8") as file:
             file.write("\n==================================")
             file.write(f"\nName: {name}")
             file.write(f"\nYear: {year_group}")
             file.write(f"\nSubjects: {subjects}")
-            file.write(f"\nTime: {time}")
             file.write(f"\nDays: {days}")
             file.write(f"\nEmail: {email}")
             file.write(f"\nExtra: {extra}")
@@ -141,7 +139,7 @@ async def is_served_subject(subject):
 
 @app.post("/submit", response_model=MessageResponse)
 async def submit_application(form: ApplicationForm):
-    print(f"Name: {form.name}, Grade: {form.year_group}, Subjects: {form.subjects}, Time: {form.time}, Days: {form.days}, Email: {form.email}, Extra: {form.extra}.")
+    print(f"Name: {form.name}, Grade: {form.year_group}, Subjects: {form.subjects}, Days: {form.days}, Email: {form.email}, Extra: {form.extra}.")
     if form.year_group >= 9 or not str(form.year_group).isdigit():
         print("Rejected grade")
         raise HTTPException(status_code=422, detail="This grade is unavailable for lessons")
@@ -164,11 +162,17 @@ async def submit_application(form: ApplicationForm):
             return {
                 "message": "One or more of the subjects selected aren't served"
             }
+    for day in form.days:
+        if day.lower() != "monday":
+            print("Rejected days")
+            raise HTTPException(status_code=422, detail="That day isn't available for lessons")
+            return {
+                "message": "That day isn't available for lessons"
+            }
     saved = save_application(
         name=form.name,
         year_group=form.year_group,
         subjects=form.subjects,
-        time=form.time,
         days=form.days,
         email=form.email,
         extra=form.extra
