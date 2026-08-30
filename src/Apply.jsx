@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { Routes, Route, Link } from 'react-router'
 import Bar from "./Bar.jsx";
 
-const SUBJECTS = ["math", "science", "english", "digi-tech", "german", "music", "arts", "hass",];
+const SUBJECTS = ["math", /* "science", "english", "digi-tech", "german", "music", "arts", "hass",*/];
 const DAYS = ["monday"];
 
 function Apply() {
@@ -135,7 +135,7 @@ function Apply() {
                       checked={days.includes(day)}
                       onChange={() => toggleDay(day)}
                     />
-                    <span className="chip">{day}</span>
+                    <span className="chip">{day + " wk 9"}</span>
                   </label>
                 ))}
             </div>
@@ -154,7 +154,7 @@ function Apply() {
             <p className="paragraph">Looking for website lessons? Head to <Link to="/lessons" className='internal-link'>our lessons page</Link>.</p>
             <p className="paragraph">Joke applications will be ignored.</p>
         </form>
-        
+
       </div>
     </>
   );
