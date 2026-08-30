@@ -135,7 +135,7 @@ function Apply() {
                       checked={days.includes(day)}
                       onChange={() => toggleDay(day)}
                     />
-                    <span className="chip">{day + " wk 9"}</span>
+                    <span className="chip">{day + " wk-9 in time 4"}</span>
                   </label>
                 ))}
             </div>
