@@ -2,7 +2,7 @@
 // I mean I can do the js but whatever monstrosity this is, yeah no
 // I did all the backend myself tho, I'm good at that
 import { useState } from 'react'
-import { Routes, Route, Link } from 'react-router'
+import { Link } from 'react-router'
 import Bar from "./Bar.jsx";
 
 const SUBJECTS = ["math", /* "science", "english", "digi-tech", "german", "music", "arts", "hass",*/];
