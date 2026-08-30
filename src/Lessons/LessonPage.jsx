@@ -1,5 +1,5 @@
 import { LessonSidebarButton } from '../Button.jsx'
-import { Algebra } from './Math/Chapters.jsx'
+import { Algebra, Trigonometry } from './Math/Chapters.jsx'
 
 function MathSidebar() {
   return (
@@ -23,7 +23,7 @@ function LessonContent() {
           </div>
         </div>
         <div className="lesson-content">
-          <Algebra/>
+          <Trigonometry/>
         </div>
       </div>
     </>

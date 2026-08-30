@@ -504,3 +504,8 @@ input:checked + .chip {
     height: 24px;
     border-radius: 8px;
 }
+
+.trig-image {
+    width: 400px;
+    margin: 16px;
+}

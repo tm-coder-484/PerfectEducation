@@ -1,6 +1,7 @@
 import { LessonSidebarButton } from '../../Button.jsx'
 import { InlineMath, BlockMath } from 'react-katex';
 import {MathRenderer} from '../../MathRenderer.jsx'
+import Triangle from '../../assets/images/triangle-diagram.png'
 
 export function Algebra() {
   return (
@@ -33,6 +34,16 @@ export function Trigonometry() {
         Trigonometry is a branch of math that deals with the relationships between the sides and angles of triangles. We can use it to solve for unknown sides and angles in a triangle making it very useful. 
         ## Trigonometric ratios
         The three quintessential trigonometry ratios are sine, cosine and tangent. They are equal to the ratio of two sides of a right angled triangle. 
+      `} />
+      <img src={Triangle} className='trig-image'/>
+      <MathRenderer content={String.raw`
+        $\sin(\theta)=\frac{opposite}{hypotenuse}$
+        $\cos(\theta)=\frac{adjacent}{hypotenuse}$
+        $\tan(\theta)=\frac{opposite}{adjacent}$
+      `} />
+      <MathRenderer content={String.raw`
+        Where $\theta$ is the angle of a right angled triangle. These can be memorised using the acronym SohCahToa
+        
       `} />
     </>
   )
