@@ -5,7 +5,7 @@ import Triangle from '../../assets/images/triangle-diagram.png'
 import Tri1 from '../Images/tri1.png'
 import Tri2 from '../Images/tri2.png'
 import Tri3 from '../Images/tri3.png'
-
+# Great work Stan!
 
 export function Algebra() {
   return (
