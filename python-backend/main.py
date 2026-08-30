@@ -129,10 +129,10 @@ async def is_invalid_name(name):
         return True
     else:
         return False
-served_subjects = ["math", "science", "english", "digi-tech", "german", "music", "music", "arts", "hass"]
+
 async def is_served_subject(subject):
     print(f"Subject submitted: {subject}")
-    if subject not in served_subjects:
+    if subject.lower() != "maths":
         return True
     else:
         return False
