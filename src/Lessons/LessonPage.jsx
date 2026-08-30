@@ -23,7 +23,7 @@ function LessonContent() {
           </div>
         </div>
         <div className="lesson-content">
-          <Trignometry />
+          <Trigonometry />
 
         </div>
       </div>
