@@ -6,14 +6,13 @@ import { Routes, Route, Link } from 'react-router'
 import Bar from "./Bar.jsx";
 
 const SUBJECTS = ["math", "science", "english", "digi-tech", "german", "music", "arts", "hass",];
-const DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday"];
+const DAYS = ["monday"];
 
 function Apply() {
   const [form, setForm] = useState({
     name: "",
     email: "",
     yearGroup: "",
-    time: "",
     extra: "",
   });
   const [subjects, setSubjects] = useState([]);
@@ -45,11 +44,6 @@ function Apply() {
       setErrorMsg("Year level must be a number.");
       return;
     }
-    if (!form.time) {
-      setStatus("error");
-      setErrorMsg("Please pick a time.");
-      return;
-    }
     if (subjects.length === 0) {
       setStatus("error");
       setErrorMsg("Pick at least one subject.");
@@ -71,8 +65,6 @@ function Apply() {
           year_group: yearGroupNum,
           subjects,
           days,
-          // <input type="time"> gives "HH:MM" - pydantic's time type wants "HH:MM:SS"
-          time: form.time.length === 5 ? `${form.time}:00` : form.time,
           extra: form.extra,
         }),
       });
@@ -83,7 +75,7 @@ function Apply() {
       }
 
       setStatus("success");
-      setForm({ name: "", email: "", yearGroup: "", time: "", extra: "" });
+      setForm({ name: "", email: "", yearGroup: "", extra: "" });
       setSubjects([]);
       setDays([]);
     } catch (err) {
@@ -146,11 +138,6 @@ function Apply() {
                     <span className="chip">{day}</span>
                   </label>
                 ))}
-            </div>
-
-            <div className="textfield">
-                <input type="time" id="time" placeholder=" " value={form.time} onChange={handleChange} required/>
-                <label htmlFor="time">Preferred time</label>
             </div>
 
             <div className="textfield extra-textfield">
