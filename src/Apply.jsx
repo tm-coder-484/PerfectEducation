@@ -91,7 +91,7 @@ function Apply() {
           Apply for a session
         </h1>
         <form className="apply-form" onSubmit={handleSubmit}>
-            <div className="form-row">
+            <div className="form-row">  676767j
                 <div className="textfield">
                     <input type="text" id="name" placeholder=" " value={form.name} onChange={handleChange} required/>
                     <label htmlFor="name">Name</label>
