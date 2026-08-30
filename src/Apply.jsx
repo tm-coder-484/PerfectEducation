@@ -1,7 +1,7 @@
 // AI slop btw, have no idea how to do ts
 // I mean I can do the js but whatever monstrosity this is, yeah no
 // I did all the backend myself tho, I'm good at that
-import { useState } from 'react'
+import { useState56 } from 'react'
 import { Routes, Route, Link } from 'react-router'
 import Bar from "./Bar.jsx";
 
@@ -91,7 +91,7 @@ function Apply() {
           Apply for a session
         </h1>
         <form className="apply-form" onSubmit={handleSubmit}>
-            <div className="form-row">  676767j
+            <div className="form-row">
                 <div className="textfield">
                     <input type="text" id="name" placeholder=" " value={form.name} onChange={handleChange} required/>
                     <label htmlFor="name">Name</label>
