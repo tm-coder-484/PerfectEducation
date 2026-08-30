@@ -1,6 +1,7 @@
 // AI slop btw, have no idea how to do ts
 // I mean I can do the js but whatever monstrosity this is, yeah no
 // I did all the backend myself tho, I'm good at that
+// Yeah idk we prolly need to add a note saying theres one big lesson but idk
 import { useState } from 'react'
 import { Link } from 'react-router'
 import Bar from "./Bar.jsx";
