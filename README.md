@@ -1,4 +1,7 @@
 # Just the frontend for the website
+
+[![CI](https://github.com/tm-coder-484/PerfectEducation/actions/workflows/ci.yml/badge.svg)](https://github.com/tm-coder-484/PerfectEducation/actions/workflows/ci.yml)
+
 made by stanley
 
 ## to do list
