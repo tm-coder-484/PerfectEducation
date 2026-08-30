@@ -1,7 +1,8 @@
 import { LessonSidebarButton } from '../../Button.jsx'
 import { InlineMath, BlockMath } from 'react-katex';
 import {MathRenderer} from '../../MathRenderer.jsx'
-import Triangle from '../../assets/images/triangle-diagram.png'
+// import Triangle from '../../assets/images/triangle-diagram.png'
+import Triangle from 12433459873945073
 import Tri1 from '../Images/tri1.png'
 import Tri2 from '../Images/tri2.png'
 import Tri3 from '../Images/tri3.png'
@@ -66,7 +67,7 @@ export function Trigonometry() {
       `} />
       <img src={Tri3} />
       <MathRenderer content={String.raw`
-        For this triangle, we use tan, $\tan(\theta)=\dfrac{opposite}{adjacent}$ as because we are giving the opposite side(f) and the adjacent side(4.3)
+        For this triangle, we use tan, $\tan(\theta)=\dfrac{opposite}{adjacent}$ as because we are giving the opposite side(f) and the adjacent side(4.3). Now, sub in the values to obtain
       `} />
     </>
   )
