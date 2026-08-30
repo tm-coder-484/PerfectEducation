@@ -68,6 +68,14 @@ a {
   text-decoration: none;
 }
 
+p {
+    line-height: 2;
+}
+
+h2 {
+    margin: 8px;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
