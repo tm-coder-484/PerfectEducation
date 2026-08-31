@@ -17,7 +17,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/lessons" element={<Lessons />} />
-          <Route path="/lessons/content/:id" element={<LessonContent />} />
+          <Route path="/lessons/content" element={<LessonContent />} />
         </Routes>
 
       </div>

@@ -1,12 +1,18 @@
 import { LessonSidebarButton } from '../../Button.jsx'
 import { InlineMath, BlockMath } from 'react-katex';
 import {MathRenderer} from '../../MathRenderer.jsx'
-// import Triangle from '../../assets/images/triangle-diagram.png'
-import Triangle from 12433459873945073
+import Triangle from '../../assets/images/triangle-diagram.png'
 import Tri1 from '../Images/tri1.png'
 import Tri2 from '../Images/tri2.png'
 import Tri3 from '../Images/tri3.png'
+import Tree from '../Images/tree.jpg'
+import Derivative1 from '../Images/derivative1.jpg'
+import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
+
+import "katex/dist/katex.min.css";
 
 export function Algebra() {
   return (
@@ -67,8 +73,57 @@ export function Trigonometry() {
       `} />
       <img src={Tri3} />
       <MathRenderer content={String.raw`
-        For this triangle, we use tan, $\tan(\theta)=\dfrac{opposite}{adjacent}$ as because we are giving the opposite side(f) and the adjacent side(4.3). Now, sub in the values to obtain
+        For this triangle, we use tan, $\tan(\theta)=\dfrac{opposite}{adjacent}$ as because we are given the opposite side to 33(f) and the adjacent side to 33(4.3). Now, sub in the values to obtain $\tan(33^\circ)=\dfrac{x}{4.3}$, then isolate x by multiplying both sides by 4.3 to get $x=4.3 \cdot \tan(33^\circ)$ or with a calculator $ x \approx 2.79$
       `} />
+      <MathRenderer content={String.raw`
+        ## How is this even useful in real life?
+        Say you want to find the height of a tree, you know your angle of elevation from the top of where you're standing from the tree as well as how far you are standing away from it. Well we can use trigonometry to figure out how far we are away!
+      `} />
+      <img src={Tree} />
+      <MathRenderer content={String.raw`
+        Now try to solve for the height of the tree in the image (hint: identify your sides you have been given and use sohcahtoa to know which ratio you use!).
+      `} />
+    </>
+  )
+}
+
+export function Calculus() {
+  return (
+    <>
+      <h1>Introduction to basic calculus</h1>
+      <MathRenderer content={String.raw`
+        Calculus is a very complicated topic, and this page will only touch the tip of the iceberg. I will try my best to explain it the best as possible however there may be gaps in your knowledge.
+        ## The derivative
+        To find the slope of a linear function, we use the formula $m=\frac{y_2-y_1}{x_2-x_1}$, where $(x_1, y_1)$ and $(x_2, y_2)$ are points the function passes through. But what do we do if we have only one point and the function? Using the formula we get $m=\dfrac{y_1-y_1}{x_1-x_1}$ which is equal to $\dfrac{0}{0}.$
+        This is famously undefined. To figure out how, we can take a small step in x, lets call it h. This makes our new x value($x_2$) $x+h$ and our correspending new y value($y_2$) $f(x+h)$
+        `} />
+      <img src={Derivative1} className='trig-image' />
+      <MathRenderer content={String.raw`
+        Using the previously afformentioned slope formula, we obtain the slope is equal to $\dfrac{f(x+h)-f(x)}{x+h-x}$, which simplifies to $\dfrac{f(x+h)-f(x)}{h}$
+        To find the slope at the exact point x, consider how if we make h smaller and smaller the line becomes closer and closer then the line closes in and almost becomes the tangent line that we want.
+        Using standard derivative notation(the slope function being $slope=f'(x)$), we can write this mathematically as $f'(x) = \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h}$. We can use this to find the slope or derivative of any function at a point.
+        ## Examples of finding derivatives of functions
+        To find the derivative of $f(x) = x^2$, lets use our newly found formula. Sub in $f(x)=x^2$ and $f(x+h)=(x+h)^2$ to get $f'(x) = \lim_{h \to 0} \dfrac{(x+h)^2-x^2}{h}$. Using the identity $(a+b)^2=a^2+2ab+b^2$, our new limit becomes $f'(x) = \lim_{h \to 0} \dfrac{x^2+2xh+h^2-x^2}{h}$, the $x^2$ terms in the numerator nicely cancel out, and we can factor out a h from the top. This gives us $f'(x) = \lim_{h \to 0} \dfrac{h(2x+h)}{h}$, the h in the numerator and denominator now cancel out because $\dfrac{h}{h}=1$ for non zero values of h, and we are finding what happens as h becomes close to 0 not equal to zero. After this, we just get the simple limit $f'(x) = \lim_{h \to 0} (2x+h)$. To consider what happens as h gets really tiny(close to 0), we simply plug in h=0 to get $f'(x)=2x+0$ or just $f'(x)=2x$. To find the slope at the point (2,4), sub in our x value of 2 to get $f'(2)= 2 \cdot 2$ or $f'(2) = 4$. Congrats, we have succesfully been able to find the slope of a function at a point!
+
+        ## Derivative rules
+        By doing some complex funky math and the binomial expansion theorem, we can find that for any power function $f(x)=x^n$, the derivative $f'(x)$ is equal to $nx^{n-1}$. Some examples include the derivative of $x^2$ being $2x$ (our previous example), the derivative of $x^3$ being $3x^2$, the derivative of $x^4$ being $4x^3$, and so on. We also have the derivative of a constant, $f(x)=c$, is simply equal to 0. This becomes intuitive when you realise this is because the value does not change. The derivative of some real number C multiplied by a function is also equal to the constant C multiplied by the derivative of the function, written as if $f(x)=C \cdot g(x)$ then $f'(x) = C \cdot g'(x)$.
+
+        ## Alternate notations
+        The mathematical operator for differentiating a function is simply $\dfrac{d}{dx}$. An alternate notation for the derivative $y=f(x)$ is $\dfrac{dy}{dx}$, meaning the derivative of y with respect to x. Combining these we get $\dfrac{d}{dx} f(x) = \dfrac{dy}{dx}$
+
+        ## More advanced derivative rules
+        By doing some more complex math with our definition of the derivative $f'(x) = \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h}$, we can find that $\dfrac{d}{dx}(f(x)g(x))=f(x)g'(x)+f'(x)g(x)$, this is known as the product rule. There is an arguably more important rule however known as the chain rule, used for finding the derivative of composite functions. It states $\dfrac{d}{dx}f(g(x))= f'(g(x)) \cdot g'(x)$,
+        or with our alternative notation, $\dfrac{dy}{dx}= \dfrac{dy}{du} \cdot \dfrac{du}{dx}$(notice how it appears the du's cancel out in the numerator and denominator), where y and u are functions. By combining the product and chain rule together, we get our third derivative rule, known as the quotient rule which states $\dfrac{d}{dx}(\dfrac{f(x)}{g(x)})=\dfrac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}$
+
+        ## Derivatives of non power functions
+        Using the derivative definition we found earlier, we can find the derivatives of non numerous power functions, basic ones include the exponentials, $\dfrac{d}{dx}e^x= e^x$ (yes, the derivative is equal to itself) and $\dfrac{d}{dx}a^x=a^x \cdot \ln(a)$. Trigonometric functions include $\dfrac{d}{dx} \sin(x) = \cos(x)$, $\dfrac{d}{dx} \cos(x) = -\sin(x)$ and finally logarithmic which include $\dfrac{d}{dx} and \ln(x)=\dfrac{1}{x}$ $\dfrac{d}{dx} \log_b(x)=\dfrac{1}{x\ln(b)}$.
+
+        # Integrals(The opposite of derivatives)
+        `} />
+
+
+
+
     </>
   )
 }
