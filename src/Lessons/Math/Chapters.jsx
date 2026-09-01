@@ -8,8 +8,6 @@ import Tri3 from '../Images/tri3.png'
 import Tree from '../Images/tree.jpg'
 import Derivative1 from '../Images/derivative1.jpg'
 import ReactMarkdown from 'react-markdown';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
 
 
 import "katex/dist/katex.min.css";
@@ -83,6 +81,22 @@ export function Trigonometry() {
       <MathRenderer content={String.raw`
         Now try to solve for the height of the tree in the image (hint: identify your sides you have been given and use sohcahtoa to know which ratio you use!).
       `} />
+      <MathRenderer content={String.raw`
+        # Evil trig(inverse trig, aka finding angles)
+        Remember our three trig ratios? If not, they're down below
+        $$
+        \sin(\theta)=\dfrac{opposite}{hypotenuse}
+        \cos(\theta)=\dfrac{adjacent}{hypotenuse}
+        \tan(\theta)=\dfrac{opposite}{adjacent}
+        $$
+        Well isolating for our angle $\theta$ using the inverse trig functions, we get
+        $$
+        \sin^{-1}(\dfrac{opposite}{hypotenuse})=\theta ,
+        \cos^{-1}(\dfrac{adjacent}{hypotenuse})=\theta ,
+        \tan^{-1}(\dfrac{opposite}{adjacent})=\theta
+        $$
+        Which we can use for finding the angle of a triangle when we know 2 sides
+      `} />
     </>
   )
 }
@@ -116,7 +130,7 @@ export function Calculus() {
         or with our alternative notation, $\dfrac{dy}{dx}= \dfrac{dy}{du} \cdot \dfrac{du}{dx}$(notice how it appears the du's cancel out in the numerator and denominator), where y and u are functions. By combining the product and chain rule together, we get our third derivative rule, known as the quotient rule which states $\dfrac{d}{dx}(\dfrac{f(x)}{g(x)})=\dfrac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}$
 
         ## Derivatives of non power functions
-        Using the derivative definition we found earlier, we can find the derivatives of non numerous power functions, basic ones include the exponentials, $\dfrac{d}{dx}e^x= e^x$ (yes, the derivative is equal to itself) and $\dfrac{d}{dx}a^x=a^x \cdot \ln(a)$. Trigonometric functions include $\dfrac{d}{dx} \sin(x) = \cos(x)$, $\dfrac{d}{dx} \cos(x) = -\sin(x)$ and finally logarithmic which include $\dfrac{d}{dx} and \ln(x)=\dfrac{1}{x}$ $\dfrac{d}{dx} \log_b(x)=\dfrac{1}{x\ln(b)}$.
+        Using the derivative definition we found earlier, we can find the derivatives of non numerous power functions, basic ones include the exponentials, $\dfrac{d}{dx}e^x= e^x$ (yes, the derivative is equal to itself) and $\dfrac{d}{dx}a^x=a^x \cdot \ln(a)$. Trigonometric functions include $\dfrac{d}{dx} \sin(x) = \cos(x)$, $\dfrac{d}{dx} \cos(x) = -\sin(x)$ and finally logarithmic which include $\dfrac{d}{dx} \ln(x)=\dfrac{1}{x}$ $\dfrac{d}{dx} \log_b(x)=\dfrac{1}{x\ln(b)}$.
 
         # Integrals(The opposite of derivatives)
         `} />

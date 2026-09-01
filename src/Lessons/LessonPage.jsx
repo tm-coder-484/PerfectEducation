@@ -1,7 +1,8 @@
 import { LessonSidebarButton } from '../Button.jsx'
+import { MathRenderer } from '../MathRenderer.jsx';
 import { Algebra, Trigonometry, Calculus } from './Math/Chapters.jsx'
 import { useSearchParams } from 'react-router';
-
+import PElogo from '../assets/logo.png'
 
 
 
@@ -9,10 +10,10 @@ function LessonContent() {
   const [searchParams, setSearchParams] = useSearchParams();
   const subjectQuery = searchParams.get('subject') || '';
   const lessonQuery = searchParams.get('lesson') || '';
-  const handleSearchChange = (event) => {
-    const value = event.target.value;
-    setSearchParams({ query: value});
-  };
+  // const handleSearchChange = (event) => {
+  //   const value = event.target.value;
+  //   setSearchParams({ query: value});
+  // };
   return (
     <>
 
@@ -42,13 +43,26 @@ function LessonContent() {
 
 function LessonWrapper({ lesson, subject}) {
   if (subject == "math") {
-    if (lesson == "algebra") {
-      return <Algebra />
-    } else if (lesson == "trigonometry") {
-      return <Trigonometry />
-    } else if (lesson == "calculus") {
-      return <Calculus />
+    if (lesson) {
+      if (lesson == "algebra") {
+        return <Algebra />
+      } else if (lesson == "trigonometry") {
+        return <Trigonometry />
+      } else if (lesson == "calculus") {
+        return <Calculus />
+      }
     }
+    return (
+      <>
+      <h1>Click on one of the lessons on the sidebar to get started!</h1>
+      <MathRenderer content={String.raw`
+        We have everything from calculus to algebra, get started on your math journey now!
+
+        `} />
+      <img src={PElogo}></img>
+      </>
+    )
+    
   }
 }
 

@@ -1,5 +1,6 @@
 import Card from "../Card.jsx";
 import { useState, useEffect } from 'react';
+import Math from "./Images/Math.jpg"
 function Lessons() {
     const [lessons, setLessons] = useState([]);
     const [error, setError] = useState(null);
@@ -56,8 +57,8 @@ function Lessons() {
                 console.log('Fetched lessons data:', parsedData);
                 setLessons(parseLessonsResponse(parsedData));
             } catch (error) {
-                setError('Failed to load lessons');
-                console.error('Error fetching lessons:', error);
+                // setError('Failed to load lessons');
+                // console.error('Error fetching lessons:', error);
             }
         };
         loadLessons();
@@ -70,7 +71,7 @@ function Lessons() {
             <h3 className="sub-heading">We have many online lessons, kind of like Stile.</h3>
             {error && <p className="error">{error}</p>}
             <div className="card-row">
-                {lessons.map(lesson => (
+                {/* {lessons.map(lesson => (
                     <Card
                         key={lesson.id}
                         text={lesson.title}
@@ -78,7 +79,13 @@ function Lessons() {
                         imgsrc={lesson.image}
                         link={lesson.link || '#'}
                     />
-                ))}
+                ))} */}
+                <Card
+                text="Math"
+                paragraph="A Collection of Math lessons"
+                imgsrc={Math}
+                link="/lessons/content?subject=math"
+                />
             </div>
           </div>
         </>
