@@ -6,6 +6,7 @@ import Tri1 from '../Images/tri1.png'
 import Tri2 from '../Images/tri2.png'
 import Tri3 from '../Images/tri3.png'
 import Tree from '../Images/tree.jpg'
+import iTri1 from '../Images/itrig1.png'
 import Derivative1 from '../Images/derivative1.jpg'
 import ReactMarkdown from 'react-markdown';
 
@@ -91,11 +92,16 @@ export function Trigonometry() {
         $$
         Well isolating for our angle $\theta$ using the inverse trig functions, we get
         $$
-        \sin^{-1}(\dfrac{opposite}{hypotenuse})=\theta ,
-        \cos^{-1}(\dfrac{adjacent}{hypotenuse})=\theta ,
-        \tan^{-1}(\dfrac{opposite}{adjacent})=\theta
+        \theta = \sin^{-1}(\dfrac{opposite}{hypotenuse}) , ~
+        \theta = \cos^{-1}(\dfrac{adjacent}{hypotenuse}) , ~
+        \theta = \tan^{-1}(\dfrac{opposite}{adjacent})
         $$
-        Which we can use for finding the angle of a triangle when we know 2 sides
+        Which we can use for finding the angle of a triangle when we know 2 sides (note that the -1 superscript does not mean to the power of -1 and is just notation for an inverse function that undoes the original function)
+      `} />
+      <img src={iTri1}></img>
+      <MathRenderer content={String.raw`
+        To find the value of $\theta$ in the above triangle, we use the inverse sine function as we know both the opposite(7) and the hypotenuse(10).
+        Sub our values into the above equations to get $\theta=\sin^{-1}(\dfrac{7}{10})$
       `} />
     </>
   )

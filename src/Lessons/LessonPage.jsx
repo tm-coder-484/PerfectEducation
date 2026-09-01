@@ -10,10 +10,10 @@ function LessonContent() {
   const [searchParams, setSearchParams] = useSearchParams();
   const subjectQuery = searchParams.get('subject') || '';
   const lessonQuery = searchParams.get('lesson') || '';
-  // const handleSearchChange = (event) => {
-  //   const value = event.target.value;
-  //   setSearchParams({ query: value});
-  // };
+  const handleSearchChange = (event) => {
+    const value = event.target.value;
+    setSearchParams({ query: value});
+  };
   return (
     <>
 
@@ -23,9 +23,9 @@ function LessonContent() {
             <h2>Table of Contents</h2>
             {subjectQuery == "math" && (
               <>
-                <LessonSidebarButton text="Algebra" link="/lessons/content?subject=math&lesson=algebra"></LessonSidebarButton>
-                <LessonSidebarButton text="Trigonometry" link="/lessons/content?subject=math&lesson=trigonometry"></LessonSidebarButton>
-                <LessonSidebarButton text="Calculus" link="/lessons/content?subject=math&lesson=calculus"></LessonSidebarButton>
+                <LessonSidebarButton text="Algebra" link="/lessons/content?subject=math&lesson=algebra" onClick={handleSearchChange}></LessonSidebarButton>
+                <LessonSidebarButton text="Trigonometry" link="/lessons/content?subject=math&lesson=trigonometry" onClick={handleSearchChange}></LessonSidebarButton>
+                <LessonSidebarButton text="Calculus" link="/lessons/content?subject=math&lesson=calculus" onClick={handleSearchChange}></LessonSidebarButton>
               </>
             )}
 
@@ -62,7 +62,7 @@ function LessonWrapper({ lesson, subject}) {
       <img src={PElogo}></img>
       </>
     )
-    
+
   }
 }
 
