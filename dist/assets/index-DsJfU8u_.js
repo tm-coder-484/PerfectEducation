@@ -569,7 +569,7 @@ l0,-`+(t+144)+`c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
         ## Two step equations
         Two step equations combine two [*operations*](https://en.wikipedia.org/wiki/Operation_(mathematics)) into one [*equation*](https://en.wikipedia.org/wiki/Equation) with a [*variable*](https://en.wikipedia.org/wiki/Variable_(mathematics)), adding an extra layer of complexity. Examples include $2x+4=10$ and $3x-2=13$. To solve the [*equation*](https://en.wikipedia.org/wiki/Equation), you have to apply two of our two previous steps to isolate x. To solve $2x+4=10$, we first subtract 4 from both sides to get $2x=6$, now, apply our second step of dividing by 2 in order to fully isolate x and get our result of $x=3$
         `})]})}function av(){return(0,L.jsxs)(L.Fragment,{children:[(0,L.jsx)(`h1`,{children:`Introduction to trigonometry`}),(0,L.jsx)(K_,{content:String.raw`
-        Trigonometry is a branch of math that deals with the relationships between the sides and angles of triangles. We can use it to solve for unknown sides and angles in a triangle making it very useful.
+        [**Trigonometry**](https://en.wikipedia.org/wiki/Trigonometry) is a branch of math that deals with the relationships between the sides and angles of triangles. We can use it to solve for unknown sides and angles in a triangle making it very useful.
         ## Trigonometric ratios
         The three quintessential trigonometry ratios are sine, cosine and tangent. They are equal to the ratio of two sides of a right angled triangle.
       `}),(0,L.jsx)(`img`,{src:Z_,className:`trig-image`}),(0,L.jsx)(K_,{content:String.raw`

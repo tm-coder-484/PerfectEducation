@@ -56,7 +56,7 @@ export function Trigonometry() {
     <>
       <h1>Introduction to trigonometry</h1>
       <MathRenderer content={String.raw`
-        Trigonometry is a branch of math that deals with the relationships between the sides and angles of triangles. We can use it to solve for unknown sides and angles in a triangle making it very useful.
+        [**Trigonometry**](https://en.wikipedia.org/wiki/Trigonometry) is a branch of math that deals with the relationships between the sides and angles of triangles. We can use it to solve for unknown sides and angles in a triangle making it very useful.
         ## Trigonometric ratios
         The three quintessential trigonometry ratios are sine, cosine and tangent. They are equal to the ratio of two sides of a right angled triangle.
       `} />
