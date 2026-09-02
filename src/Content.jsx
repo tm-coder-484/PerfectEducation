@@ -34,36 +34,43 @@ function Content() {
             text="Digital Technologies"
             paragraph="Many of our members have exceptional coding skills. They created this website you're looking at right now. If you want to learn how to code in html, css and javascript along with other select languages like python, this is the place!"
             imgsrc={Coding}
+            disabled={true}
           />
           <Card
             text="English"
             paragraph="The exceptional English skills of our team allows us to be able to teach you whatever you need! From writing peel paragraphs to analysing."
             imgsrc={English}
+            disabled={true}
           />
           <Card
             text="History"
             paragraph="Our team has exceptional skills in History. We can guide you through writing essays and analysing sources. We can also help you understand the content you're working on."
             imgsrc={History}
+            disabled={true}
           />
           <Card
             text="Science"
             paragraph="Our team has great skills in Science. We can guide you through understanding complex concepts and reviewing your experiment results. We can also help you with your exams stile work."
             imgsrc={Science}
+            disabled={true}
           />
           <Card
             text="Music"
             paragraph="Our team is skilled in music playing making and reading (Jason). Setting up instruments may be tricky though, but we are happy to help!"
             imgsrc={Music}
+            disabled={true}
           />
           <Card
             text="German"
             paragraph="Our team are very skilled in German, we have the top ep champions, and someone from the German Immersion program. We can help you with everything, from exams to pronunciation."
             imgsrc={German}
+            disabled={true}
           />
           <Card
             text="Arts"
             paragraph="Although not the subject our team are most skilled at, we can certainly help you get through any subject."
             imgsrc={Arts}
+            disabled={true}
           />
           <Card
             text="Apply"
