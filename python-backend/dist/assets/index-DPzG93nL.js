@@ -569,7 +569,7 @@ l0,-`+(t+144)+`c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
         ## Two step equations
         Two step equations combine two [*operations*](https://en.wikipedia.org/wiki/Operation_(mathematics)) into one [*equation*](https://en.wikipedia.org/wiki/Equation) with a [*variable*](https://en.wikipedia.org/wiki/Variable_(mathematics)), adding an extra layer of complexity. Examples include $2x+4=10$ and $3x-2=13$. To solve the [*equation*](https://en.wikipedia.org/wiki/Equation), you have to apply two of our two previous steps to isolate x. To solve $2x+4=10$, we first subtract 4 from both sides to get $2x=6$, now, apply our second step of dividing by 2 in order to fully isolate x and get our result of $x=3$
         `})]})}function av(){return(0,L.jsxs)(L.Fragment,{children:[(0,L.jsx)(`h1`,{children:`Introduction to trigonometry`}),(0,L.jsx)(K_,{content:String.raw`
-        [**Trigonometry**](https://en.wikipedia.org/wiki/Trigonometry) is a branch of [*math*](https://en.wikipedia.org/wiki/Mathematics) that deals with the relationships between the sides and angles of [*triangles*](https://en.wikipedia.org/wiki/Triangle). We can use it to solve for unknown sides and [*angles*](https://en.wikipedia.org/wiki/Angle) in a [*triangle*](https://en.wikipedia.org/wiki/Triangle) making it very useful.
+        [**Trigonometry**](https://en.wikipedia.org/wiki/Trigonometry) is a branch of [*math*](https://en.wikipedia.org/wiki/Mathematics) that deals with the relationships between the sides and [*angles*](https://en.wikipedia.org/wiki/Angle) of [*triangles*](https://en.wikipedia.org/wiki/Triangle). We can use it to solve for unknown sides and [*angles*](https://en.wikipedia.org/wiki/Angle) in a [*triangle*](https://en.wikipedia.org/wiki/Triangle) making it very useful.
         
         ---
         
@@ -580,7 +580,7 @@ l0,-`+(t+144)+`c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
         $\cos(\theta)=\dfrac{adjacent}{hypotenuse}$
         $\tan(\theta)=\dfrac{opposite}{adjacent}$
       `}),(0,L.jsx)(K_,{content:String.raw`
-        Where $\theta$ is the angle of a right angled triangle. These can be memorised using the acronym soh-cah-toa
+        Where $\theta$ is the [*angle*](https://en.wikipedia.org/wiki/Angle) of a [*right angled triangle*](https://en.wikipedia.org/wiki/Right_triangle). These can be memorised using the acronym [*soh-cah-toa*](https://en.wikipedia.org/wiki/Mnemonics_in_trigonometry).
         
         ---
         

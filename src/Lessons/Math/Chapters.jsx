@@ -56,7 +56,7 @@ export function Trigonometry() {
     <>
       <h1>Introduction to trigonometry</h1>
       <MathRenderer content={String.raw`
-        [**Trigonometry**](https://en.wikipedia.org/wiki/Trigonometry) is a branch of [*math*](https://en.wikipedia.org/wiki/Mathematics) that deals with the relationships between the sides and angles of [*triangles*](https://en.wikipedia.org/wiki/Triangle). We can use it to solve for unknown sides and [*angles*](https://en.wikipedia.org/wiki/Angle) in a [*triangle*](https://en.wikipedia.org/wiki/Triangle) making it very useful.
+        [**Trigonometry**](https://en.wikipedia.org/wiki/Trigonometry) is a branch of [*math*](https://en.wikipedia.org/wiki/Mathematics) that deals with the relationships between the sides and [*angles*](https://en.wikipedia.org/wiki/Angle) of [*triangles*](https://en.wikipedia.org/wiki/Triangle). We can use it to solve for unknown sides and [*angles*](https://en.wikipedia.org/wiki/Angle) in a [*triangle*](https://en.wikipedia.org/wiki/Triangle) making it very useful.
         
         ---
         
@@ -70,7 +70,7 @@ export function Trigonometry() {
         $\tan(\theta)=\dfrac{opposite}{adjacent}$
       `} />
       <MathRenderer content={String.raw`
-        Where $\theta$ is the angle of a right angled triangle. These can be memorised using the acronym soh-cah-toa
+        Where $\theta$ is the [*angle*](https://en.wikipedia.org/wiki/Angle) of a [*right angled triangle*](https://en.wikipedia.org/wiki/Right_triangle). These can be memorised using the acronym [*soh-cah-toa*](https://en.wikipedia.org/wiki/Mnemonics_in_trigonometry).
         
         ---
         
