@@ -13,7 +13,7 @@ function Card({ text, paragraph, link, imgsrc, disabled }) {
               src={imgsrc} 
               alt="card image" 
               className="card-image" 
-              style={disabled ? { filter: "grayscale(100%) opacity(50%)" } : {}}
+              style={disabled ? { filter: "grayscale(100%) opacity(70%)" } : {}}
             />
           </div>
           <h2 className="card-text">{text}</h2>
