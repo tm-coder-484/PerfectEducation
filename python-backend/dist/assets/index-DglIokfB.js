@@ -563,6 +563,7 @@ l0,-`+(t+144)+`c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
         
         ## Verifying solutions
         To verify your solutions to [*equations*](https://en.wikipedia.org/wiki/Equation), you can simply replace all values of x with the number you solved x to be equal to and check if the left hand side equals the right hand side. To verify $x=4$ as the solution to $3x=12$, replace the x with 4 (as that is the solution we found) to get $3 \cdot 4=12$, and [*simplifying*](https://en.wikipedia.org/wiki/Simplification) further we got $12=12$, verifying our solution is correct.
+        
         ---
         
         ## Two step equations
