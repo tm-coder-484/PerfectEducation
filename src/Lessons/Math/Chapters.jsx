@@ -82,16 +82,18 @@ export function Trigonometry() {
       `} />
       <img src={Tri1} className='trig-image' />
       <MathRenderer content={String.raw`
-        Our given sides are the opposite(x, because its opposite the given angle 32) and the hypotenuse(4), therefore we use sin because $\sin(\theta)=\dfrac{opposite}{hypotenuse}$. Now sub in the values for $\theta$, the opposite side and the hypotenuse to get $\sin(32^\circ)=\dfrac{x}{4}$. Now just like we solved the previous equation, we multiply both sides to obtain $x=4 \cdot \sin(32^\circ)$. Plugging into a calculator we get $x \approx 2.12$ ($\approx$ means they are almost equal, since we rounded)
-        Now lets try some different examples.
+        Our given sides are the opposite(x, because its opposite the given angle 32) and the [*hypotenuse*](https://en.wikipedia.org/wiki/Hypotenuse) (4), therefore we use sine(sin) because $\sin(\theta)=\dfrac{opposite}{hypotenuse}$. Now sub in the values for $\theta$, the opposite side and the [*hypotenuse*](https://en.wikipedia.org/wiki/Hypotenuse) to get $\sin(32^\circ)=\dfrac{x}{4}$. Now just like we solved the previous [*equation*](https://en.wikipedia.org/wiki/Equation), we multiply both sides to obtain $x=4 \cdot \sin(32^\circ)$. Plugging into a calculator we get $x \approx 2.12$ ($\approx$ means they are almost equal, since we rounded)
+        
+        ---
+        ### Now lets try some different examples.
       `} />
       <img src={Tri2}  />
       <MathRenderer content={String.raw`
-        This time, we are given the adjacent side(x, because its right next to the angle 30 but is not the hypotenuse), and the hypotenuse(17). We must use cos, because $\cos(\theta)=\dfrac{adjacent}{hypotenuse}$. Sub our values for $\theta$, adjacent and hypotenuse in to get $\cos(30^\circ)=\dfrac{x}{17}$. Now multiply both sides by 17 to get $x= 17 \cdot \cos(30^\circ)$, which with a calculator approximately equals $14.72$
+        This time, we are given the adjacent side (x, because its right next to the angle 30 but is not the [*hypotenuse*](https://en.wikipedia.org/wiki/Hypotenuse)), and the [*hypotenuse*](https://en.wikipedia.org/wiki/Hypotenuse) (17). We must use [*cosine*](https://en.wikipedia.org/wiki/Sine_and_cosine) (cos), because $\cos(\theta)=\dfrac{adjacent}{hypotenuse}$. Sub our values for $\theta$, adjacent and [*hypotenuse*](https://en.wikipedia.org/wiki/Hypotenuse) in to get $\cos(30^\circ)=\dfrac{x}{17}$. Now multiply both sides by 17 to get $x= 17 \cdot \cos(30^\circ)$, which with a calculator approximately equals $14.72$
       `} />
       <img src={Tri3} />
       <MathRenderer content={String.raw`
-        For this triangle, we use tan, $\tan(\theta)=\dfrac{opposite}{adjacent}$ as because we are given the opposite side to 33(f) and the adjacent side to 33(4.3). Now, sub in the values to obtain $\tan(33^\circ)=\dfrac{x}{4.3}$, then isolate x by multiplying both sides by 4.3 to get $x=4.3 \cdot \tan(33^\circ)$ or with a calculator $ x \approx 2.79$
+        For this triangle, we use tangent(tan), $\tan(\theta)=\dfrac{opposite}{adjacent}$ as because we are given the opposite side to 33(f) and the adjacent side to 33(4.3). Now, sub in the values to obtain $\tan(33^\circ)=\dfrac{x}{4.3}$, then isolate x by multiplying both sides by 4.3 to get $x=4.3 \cdot \tan(33^\circ)$ or with a calculator $ x \approx 2.79$
       `} />
       <MathRenderer content={String.raw`
         ## How is this even useful in real life?
