@@ -75,7 +75,9 @@ export function Trigonometry() {
         ---
         
         ## Applying trigonometric ratios
-        Now you may be wondering how these weird looking functions could possibly help us to find the sides of a triangle. Which is why i shall show you how. First, lets look at some simpler equations. To solve $\dfrac{x}{4} =2$, you would multiply both sides by 4 in order to get $x=8$, Now lets apply this logic to our triangles.
+        Now you may be wondering how these weird looking [*functions*](https://en.wikipedia.org/wiki/Function_(mathematics)) could possibly help us to find the sides of a [*triangle*](https://en.wikipedia.org/wiki/Triangle). Which is why I shall show you how. First, lets look at some simpler [*equations*](https://en.wikipedia.org/wiki/Equation).
+        Now to put this into practice.
+        To solve $\dfrac{x}{4} =2$, you would multiply both sides by 4 in order to get $x=8$. Now lets apply this logic to our [*triangles*](https://en.wikipedia.org/wiki/Triangle).
 
       `} />
       <img src={Tri1} className='trig-image' />

@@ -585,7 +585,9 @@ l0,-`+(t+144)+`c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
         ---
         
         ## Applying trigonometric ratios
-        Now you may be wondering how these weird looking functions could possibly help us to find the sides of a triangle. Which is why i shall show you how. First, lets look at some simpler equations. To solve $\dfrac{x}{4} =2$, you would multiply both sides by 4 in order to get $x=8$, Now lets apply this logic to our triangles.
+        Now you may be wondering how these weird looking [*functions*](https://en.wikipedia.org/wiki/Function_(mathematics)) could possibly help us to find the sides of a [*triangle*](https://en.wikipedia.org/wiki/Triangle). Which is why I shall show you how. First, lets look at some simpler [*equations*](https://en.wikipedia.org/wiki/Equation).
+        Now to put this into practice.
+        To solve $\dfrac{x}{4} =2$, you would multiply both sides by 4 in order to get $x=8$. Now lets apply this logic to our [*triangles*](https://en.wikipedia.org/wiki/Triangle).
 
       `}),(0,L.jsx)(`img`,{src:Q_,className:`trig-image`}),(0,L.jsx)(K_,{content:String.raw`
         Our given sides are the opposite(x, because its opposite the given angle 32) and the hypotenuse(4), therefore we use sin because $\sin(\theta)=\dfrac{opposite}{hypotenuse}$. Now sub in the values for $\theta$, the opposite side and the hypotenuse to get $\sin(32^\circ)=\dfrac{x}{4}$. Now just like we solved the previous equation, we multiply both sides to obtain $x=4 \cdot \sin(32^\circ)$. Plugging into a calculator we get $x \approx 2.12$ ($\approx$ means they are almost equal, since we rounded)
