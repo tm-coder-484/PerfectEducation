@@ -16,7 +16,7 @@ import "katex/dist/katex.min.css";
 export function Algebra() {
   return (
     <>
-      <h1>Introduction to algebra</h1>
+      <h1>Introduction to <strong>Algebra</strong></h1>
       <MathRenderer content={String.raw`
         [**Algebra**](https://en.wikipedia.org/wiki/Algebra) is the branch of math that lets you use letters and symbols to stand for unknown numbers.
         In fact, you may have even used it without even realising! Say you spent 20 dollars on 5 apples, and you want to know how much each apple would cost. Well 4 right, obviously? Because $5\cdot4 = 20$ (note the dot here means multiplication, which we shall use throughout these lessons isntead of the classic x you're used to). Congrats, you solved your first algebraic equation without even realising it!
