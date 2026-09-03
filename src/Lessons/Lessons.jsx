@@ -34,7 +34,7 @@ function Lessons() {
     // };
 
   //sorry jimmy i just commented a bunch of your code to ` this fixed
-
+  // its all good man
     // useEffect(() => {
     //     const loadLessons = async () => {
     //         try {
