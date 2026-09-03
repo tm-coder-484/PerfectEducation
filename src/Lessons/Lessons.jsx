@@ -35,6 +35,7 @@ function Lessons() {
 
   //sorry jimmy i just commented a bunch of your code to ` this fixed
   // its all good man
+  // Make me able to push to test CI
     // useEffect(() => {
     //     const loadLessons = async () => {
     //         try {
